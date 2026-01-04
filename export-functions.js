@@ -143,8 +143,18 @@ function getPathsForCommandsWithDataExecute(directory, validFilesList = []) {
     return actOnDataExecutePresence(filesList, validFilesList);
 }
 
+/**
+ * 
+ * @returns {number}
+ */
+function getActualYear() {
+    const date = new Date();
+    return date.getFullYear();
+}
+
 module.exports = {
     getPathsForCommandsWithDataExecute,
     logDevModeOnly,
-    logListDevModeOnly
-}
+    logListDevModeOnly,
+    getActualYear
+};
